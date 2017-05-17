@@ -1,0 +1,14 @@
+CFLAGS = gcc -g -Wall
+CLIB = -lm -lpthread
+JFLAGS = javac
+
+.PHONY : all clean
+
+all : java
+
+java :
+	$(JFLAGS) driver/*java model/*java view/*java network/*java
+
+clean :
+	/bin/rm -f jacobi
+	/bin/rm -f *.class
